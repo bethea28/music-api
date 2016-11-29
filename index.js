@@ -6,6 +6,7 @@ const Artist = require('./models/artist-model');
 const view = require('./routes/view-router.js');
 const songs = require('./routes/songs-router.js');
 const artists = require('./routes/artists-router.js');
+const songsWithArtists = require('./routes/songsWithArtists-router.js');
 
 module.exports = {
   models: {
@@ -15,6 +16,7 @@ module.exports = {
   routes: {
     view: view, 
     songs: songs,
-    artists: artists
+    artists: artists,
+    songsWithArtists: songsWithArtists
   }
 }

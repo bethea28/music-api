@@ -17,6 +17,7 @@ const routes = require('./index').routes
 
 app.use("/api/songs", routes.songs)
 app.use("/api/artists", routes.artists)
+app.use("/api", routes.songsWithArtists)
 
 //serve all of the HTML views, which we'll eventually use to build a simple user interface
 app.use("/view", routes.view)

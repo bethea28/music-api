@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const Artist = require('../models/artist-model');
+const Song = require('../models/song-model');
 
 const getAllArtists = (req, res) =>{
   Artist.findAll()
@@ -52,6 +53,18 @@ const getAllArtistsExceptJungle = (req, res) =>{
   })
 }
 
+const getAllFrankOrChromeoSongs = (req, res) =>{
+  Song.findAll({
+    where: {
+      artistId: [1,4],
+    },
+    include: Artist
+  })
+  .then( songs => {
+    res.send(songs)
+  })
+}
+
 
 //Routes
 router.route('/')
@@ -64,12 +77,7 @@ router.route('/name/:name')
   .get(getOneArtistByName)
 router.route('/no-jungle')
   .get(getAllArtistsExceptJungle)
+router.route('/frank-or-chromeo')
+  .get(getAllFrankOrChromeoSongs)
 
 module.exports = router;
-
-
-// /api/artists GET all artists
-// /api/artists/sort/a-z GET all artists sorted alphabetically
-// /api/artists/id/:id GET specific artist by id
-// /api/artists/name/:name GET specific artist by name
-// /api/artists/no-jungle GET all artists except for 'Jungle'
