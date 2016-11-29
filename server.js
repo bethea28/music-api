@@ -15,7 +15,8 @@ app.listen('8888', () => console.log('Listening on port 8888'));
 const routes = require('./index').routes
 
 app.use("/api/songs", routes.songs)
-app.use("/api/artist", routes.songs)
+app.use("/api/artists", routes.artists)
+// app.use("/*", './index')
 
 //serve all of the HTML views, which we'll eventually use to build a simple user interface
 app.use("/view", routes.view)
