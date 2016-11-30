@@ -6,7 +6,8 @@ const LiveReloadPlugin = require('webpack-livereload-plugin');
 module.exports = {
   entry: ["./client/public/entry.js"],
   output: {
-    path: __dirname + "/public",
+    path: __dirname, 
+    publicPath:"/music-api/client/public",
     filename: "bundle.js",
     devtoolModuleFilenameTemplate: '[resourcePath]',
     devtoolFallbackModuleFilenameTemplate: '[resourcePath]?[hash]'

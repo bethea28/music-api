@@ -1,4 +1,4 @@
-import react from 'react'
+import React from 'react'
 import $ from 'jquery'
 
 var App=React.createClass({

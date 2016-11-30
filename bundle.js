@@ -34,7 +34,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/music-api/client/public";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
@@ -5807,13 +5807,13 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var App = React.createClass({
+	var App = _react2.default.createClass({
 		displayName: 'App',
 		render: function render() {
-			return React.createElement(
+			return _react2.default.createElement(
 				'div',
 				null,
-				React.createElement(
+				_react2.default.createElement(
 					'button',
 					null,
 					'PUSH'
