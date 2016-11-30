@@ -1,3 +1,6 @@
+
+
+
 {
   "name": "music-api",
   "version": "1.0.0",
@@ -17,5 +20,16 @@
     "pg": "^6.1.0",
     "pg-hstore": "^2.3.2",
     "sequelize": "^3.27.0"
-  }
+  },
+  "devDependencies": {
+    "webpack": "^1.13.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bethea28/music-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bethea28/music-api/issues"
+  },
+  "homepage": "https://github.com/bethea28/music-api#readme"
 }
