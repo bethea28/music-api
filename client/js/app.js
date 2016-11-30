@@ -1,7 +1,7 @@
 import React from 'react'
 import $ from 'jquery'
 
-var App=React.createClass({
+const App = React.createClass({
 	render(){
 		return(
 			<div>

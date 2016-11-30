@@ -2,10 +2,11 @@ import {createStore} from 'redux'
 import {Provider} from 'react-redux'
 import Display from './container'
 import React from 'react'
-import ReactDOM from 'react-dom'
+import {render} from 'react-dom'
 // import store from 'store'
-import {hashHistory,Link,Router,Route} from 'react-router'
+import {browserHistory,Link,Router,Route} from 'react-router'
 import App from './app'
+
 
 
 		// <Display/>
@@ -13,7 +14,7 @@ import App from './app'
         // <Route path="bar" component={Bar}/>
 // var Visual=()=>{
 // <Provider store={store}>
-//     <Router history={hashHistory}>
+//     <Router history={browserHistory}>
 //       <Route path="/" component={App}>
 //       </Route>
 //     </Router>
@@ -22,9 +23,7 @@ import App from './app'
 // }
 
 
-document.addEventListener('DOMContentLoaded', ()=>{
-	ReactDOM.render(
-		<App/>,document.getElementById('root')
-	)
 
-})
+render(
+	<App/>,document.getElementById('root')
+)
