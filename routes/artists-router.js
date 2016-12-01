@@ -64,6 +64,38 @@ const getAllFrankOrChromeoSongs = (req, res) =>{
     res.send(songs)
   })
 }
+const createArtist=(req,res)=>{
+  Artist.create({
+    name:req.params.name
+  })
+  res.send('createds ')
+}
+
+const deleteArtistById=(req,res)=>{
+  Artist.destroy({
+    where:{
+
+      id:req.params.id
+    }
+  })
+  .then(()=>{
+
+    res.send('deleted')
+  })
+  
+}
+
+const updateArtistById=(req,res)=>{
+  Artist.update(
+    {name:'What I Learned With My Bachelors Coming Soon!'},
+    {where:{
+          id:req.params.id
+        }
+  })
+  .then(()=>{
+    res.send('updated')
+  })
+}
 
 
 //Routes
@@ -73,8 +105,12 @@ router.route('/sort/a-z')
   .get(getAllSortedArtistAlpha)
 router.route('/id/:id')
   .get(getOneArtistById)
+  .delete(deleteArtistById)
+  .put(updateArtistById)
 router.route('/name/:name')
   .get(getOneArtistByName)
+  .post(createArtist)
+
 router.route('/no-jungle')
   .get(getAllArtistsExceptJungle)
 router.route('/frank-or-chromeo')
