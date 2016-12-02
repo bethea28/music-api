@@ -3,19 +3,18 @@ import $ from 'jquery'
 import Song from './song'
 import test from './actions'
 
-const App = React.createClass({
+const Artist = React.createClass({
 
 
 	render(){
 		return(
 			<div>
 
-
-				<button>Navbar</button>		
-				{this.props.children}				
+    <button>artist</button>
+					
 			</div>
 		)
 	}
 })
 
-export default App
+export default Artist

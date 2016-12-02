@@ -81,21 +81,24 @@ const countSongs=(req,res)=>{
 	})
 }
 
-const newSongPost=(req,res)=>{
-	include:Artist
-	Song.findOrCreate({	
-		where:{
-			title:req.params.title
-		},
-		defaults:{
-			artistId:Artist.id
-		}
+// const newSongPost=(req,res)=>{
+// 	include:Artist
+// 	Song.findOrCreate({	
+// 		where:{
+// 			title:req.params.title
+// 		},
+// 		defaults:{
+// 			where:{
+				
+// 			}
+// 				artistId:Artist.id
+// 		}
 
-	})
-	.then(()=>{
-		res.send('19 works')
-	})
-}
+// 	})
+// 	.then(()=>{
+// 		res.send('19 works')
+// 	})
+// }
 
 // down vote
 // global.db.Tag.findOrCreate({
@@ -122,7 +125,7 @@ router.route('/id/:id')
 	.get(songId)
 router.route('/name/:title')
 	.get(getSongByTitle)
-	.post(newSongPost)
+	// .post(newSongPost)
 router.route('/sort/by-date')
 	.get(sortByDate)
 router.route('/sort/a-z')

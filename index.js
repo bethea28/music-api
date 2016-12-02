@@ -13,6 +13,7 @@ module.exports = {
     Song: Song,
     Artist: Artist
   },
+  
   routes: {
     view: view, 
     songs: songs,
