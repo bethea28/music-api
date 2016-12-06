@@ -50,9 +50,9 @@
 	
 	var _reactRedux = __webpack_require__(17);
 	
-	var _container = __webpack_require__(56);
+	var _appcontainer = __webpack_require__(264);
 	
-	var _container2 = _interopRequireDefault(_container);
+	var _appcontainer2 = _interopRequireDefault(_appcontainer);
 	
 	var _react = __webpack_require__(19);
 	
@@ -92,7 +92,7 @@
 	// )
 	var routes = _react2.default.createElement(
 		_reactRouter.Route,
-		{ path: '/', component: _container2.default },
+		{ path: '/', component: _appcontainer2.default },
 		_react2.default.createElement(_reactRouter.IndexRoute, { component: _song2.default }),
 		_react2.default.createElement(_reactRouter.Route, { path: '/artist', component: _artistcontainer2.default })
 	);
@@ -5767,42 +5767,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 56 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _reactRedux = __webpack_require__(17);
-	
-	var _app = __webpack_require__(57);
-	
-	var _app2 = _interopRequireDefault(_app);
-	
-	var _store = __webpack_require__(61);
-	
-	var _store2 = _interopRequireDefault(_store);
-	
-	var _song = __webpack_require__(59);
-	
-	var _song2 = _interopRequireDefault(_song);
-	
-	var _artist = __webpack_require__(63);
-	
-	var _artist2 = _interopRequireDefault(_artist);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	var shopping = function shopping(store) {
-	  return {};
-	};
-	
-	exports.default = (0, _reactRedux.connect)(shopping)(_app2.default);
-
-/***/ },
+/* 56 */,
 /* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -38439,11 +38404,47 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var shopping = function shopping(store) {
+	var artistContainer = function artistContainer(store) {
 		return {};
 	};
 	
-	exports.default = (0, _reactRedux.connect)(shopping)(_artist2.default);
+	exports.default = (0, _reactRedux.connect)(artistContainer)(_artist2.default);
+
+/***/ },
+/* 264 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _reactRedux = __webpack_require__(17);
+	
+	var _app = __webpack_require__(57);
+	
+	var _app2 = _interopRequireDefault(_app);
+	
+	var _store = __webpack_require__(61);
+	
+	var _store2 = _interopRequireDefault(_store);
+	
+	var _song = __webpack_require__(59);
+	
+	var _song2 = _interopRequireDefault(_song);
+	
+	var _artist = __webpack_require__(63);
+	
+	var _artist2 = _interopRequireDefault(_artist);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var appContainer = function appContainer(store) {
+	  return {};
+	};
+	
+	exports.default = (0, _reactRedux.connect)(appContainer)(_app2.default);
 
 /***/ }
 /******/ ]);

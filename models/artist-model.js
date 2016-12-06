@@ -8,4 +8,5 @@ var Artist = sequelizeConnection.define('artist', {
   }
 });
 
+Artist.sync()
 module.exports = Artist;

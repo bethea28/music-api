@@ -1,6 +1,6 @@
 import {createStore} from 'redux'
 import {Provider} from 'react-redux'
-import AppContainer from './container'
+import appContainer from './appcontainer'
 import React from 'react'
 import {render} from 'react-dom'
 import store from './store'
@@ -8,7 +8,7 @@ import {browserHistory,Link,Router,Route,IndexRoute} from 'react-router'
 import App from './app'
 import Song from './song'
 import Artist from './artist'
-import ArtistContainer from './artistcontainer'
+import artistContainer from './artistcontainer'
 
 
 
@@ -19,9 +19,9 @@ import ArtistContainer from './artistcontainer'
 
 // )
 const routes = (
-		<Route path="/" component={AppContainer}>
+		<Route path="/" component={appContainer}>
 		    <IndexRoute component={Song}/>
-		    <Route path="/artist" component={ArtistContainer}/>
+		    <Route path="/artist" component={artistContainer}/>
 		</Route>
 )
 

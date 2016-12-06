@@ -10,7 +10,7 @@ const Artist = React.createClass({
 		return(
 			<div>
 
-    <button>artist</button>
+    			<button>artist</button>
 					
 			</div>
 		)

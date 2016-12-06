@@ -5,9 +5,9 @@ import Song from './song'
 import Artist from './artist'
 
 
-var shopping=store=>({
+var appContainer=store=>({
 
 })
 
 
-export default connect(shopping)(App)
+export default connect(appContainer)(App)
