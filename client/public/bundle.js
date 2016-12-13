@@ -50,7 +50,7 @@
 	
 	var _reactRedux = __webpack_require__(17);
 	
-	var _appcontainer = __webpack_require__(264);
+	var _appcontainer = __webpack_require__(56);
 	
 	var _appcontainer2 = _interopRequireDefault(_appcontainer);
 	
@@ -5767,7 +5767,42 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 56 */,
+/* 56 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _reactRedux = __webpack_require__(17);
+	
+	var _app = __webpack_require__(57);
+	
+	var _app2 = _interopRequireDefault(_app);
+	
+	var _store = __webpack_require__(61);
+	
+	var _store2 = _interopRequireDefault(_store);
+	
+	var _song = __webpack_require__(59);
+	
+	var _song2 = _interopRequireDefault(_song);
+	
+	var _artist = __webpack_require__(63);
+	
+	var _artist2 = _interopRequireDefault(_artist);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var appContainer = function appContainer(store) {
+	  return {};
+	};
+	
+	exports.default = (0, _reactRedux.connect)(appContainer)(_app2.default);
+
+/***/ },
 /* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -38409,42 +38444,6 @@
 	};
 	
 	exports.default = (0, _reactRedux.connect)(artistContainer)(_artist2.default);
-
-/***/ },
-/* 264 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _reactRedux = __webpack_require__(17);
-	
-	var _app = __webpack_require__(57);
-	
-	var _app2 = _interopRequireDefault(_app);
-	
-	var _store = __webpack_require__(61);
-	
-	var _store2 = _interopRequireDefault(_store);
-	
-	var _song = __webpack_require__(59);
-	
-	var _song2 = _interopRequireDefault(_song);
-	
-	var _artist = __webpack_require__(63);
-	
-	var _artist2 = _interopRequireDefault(_artist);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	var appContainer = function appContainer(store) {
-	  return {};
-	};
-	
-	exports.default = (0, _reactRedux.connect)(appContainer)(_app2.default);
 
 /***/ }
 /******/ ]);
